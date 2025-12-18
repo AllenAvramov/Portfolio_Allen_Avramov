@@ -22,6 +22,8 @@ const stats = [
     },
 ];
 
+const data = "I’m a Computer Science graduate with a strong foundation in systems programming, algorithms, and software engineering, and hands-on experience building real-world backend and full-stack applications. I enjoy solving complex problems and turning them into clean, scalable solutions — whether it’s designing APIs, working with databases, or building user-focused interfaces. My background spans C++, Java, Python, and modern JavaScript frameworks, with a particular interest in backend development, distributed systems, and secure software design. Alongside my academic work, I’ve led and mentored technical teams at the Cyber Education Center, guiding students through cybersecurity and software projects while emphasizing clean code, debugging, and production-level thinking. I’ve also built and deployed full-stack and mobile applications, including systems that integrate AI, authentication, and real-time collaboration. My military service as a combat soldier and commander shaped my discipline, responsibility, and ability to perform under pressure — skills I bring into every engineering environment. I’m highly motivated, quick to learn, and always eager to take on challenges that push me to grow as a software engineer. "
+
 export default function About() {
     return (
         <section id="about" className="mx-auto max-w-7xl px-4 pt-32 md:pt-40 pb-16 md:py-20">
@@ -43,8 +45,8 @@ export default function About() {
                     </span>
                 </h2>
 
-                <p className="text-white/80 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-8">
-                    Hello, I'm <span className="font-bold text-white">Allen Avramov</span> — a Computer Science graduate passionate about building smart and scalable web & mobile applications. I've completed a full-stack development course and constantly explore new technologies to refine my skills. Focused on continuous learning, I aim to transition into the IT industry and eventually move towards AI and data science.
+                <p className="text-white/80 text-lg md:text-xl max-w-5xl mx-auto leading-relaxed mb-8">
+                    Hello, I'm <span className="font-bold text-white">Allen Avramov</span> {data}
                 </p>
 
                 <div className="flex flex-wrap justify-center gap-4 mb-16">

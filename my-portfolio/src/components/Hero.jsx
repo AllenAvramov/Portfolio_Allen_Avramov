@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaInstagram, FaExternalLinkAlt, FaEnvelope, FaStar } from "react-icons/fa";
 import { useState, useEffect } from "react";
+import meImage from "../assets/Me.png";
 
 const tech = ["React", "JavaScript", "Node.js", "PostgreSQL"];
 
@@ -42,7 +43,8 @@ export default function Hero() {
 
   return (
     <section id="home" className="mx-auto max-w-7xl px-4 pt-40 md:pt-48 pb-20 md:pb-28">
-      <div className="max-w-4xl">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -176,6 +178,66 @@ export default function Hero() {
               <FaInstagram className="text-white/80" />
             </motion.a>
           </motion.div>
+        </motion.div>
+
+        {/* Right Image */}
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="relative hidden lg:block"
+        >
+          <div className="relative">
+            {/* Glow effects behind image */}
+            <div className="absolute -top-10 -right-10 w-full h-full rounded-3xl bg-gradient-to-br from-purple-500/30 to-cyan-500/30 blur-3xl -z-10" />
+            <div className="absolute -bottom-10 -left-10 w-3/4 h-3/4 rounded-3xl bg-gradient-to-br from-pink-500/20 to-fuchsia-500/20 blur-3xl -z-10" />
+            
+            {/* Image container with glassmorphism effect */}
+            <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm p-2">
+              <div className="relative rounded-2xl overflow-hidden">
+                <motion.img
+                  src={meImage}
+                  alt="Allen Avramov"
+                  className="w-full h-auto object-cover"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                  
+                />
+                {/* Gradient overlay for better blending */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
+              </div>
+            </div>
+
+            {/* Floating tech icons around image */}
+            <motion.div
+              animate={{
+                y: [0, -10, 0],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="absolute -top-6 -right-6 w-16 h-16 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm flex items-center justify-center"
+            >
+              <span className="text-2xl">⚛️</span>
+            </motion.div>
+            
+            <motion.div
+              animate={{
+                y: [0, 10, 0],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 1
+              }}
+              className="absolute -bottom-6 -left-6 w-16 h-16 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm flex items-center justify-center"
+            >
+              <span className="text-2xl">💻</span>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>
