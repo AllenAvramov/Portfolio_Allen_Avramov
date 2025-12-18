@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaEnvelope, FaMapMarkerAlt, FaBriefcase, FaPaperPlane } from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt, FaPhone, FaPaperPlane } from "react-icons/fa";
 
 export default function Contact() {
   return (
@@ -93,7 +93,7 @@ export default function Contact() {
               </div>
               <div className="text-white/60 text-sm">Location</div>
             </div>
-            <div className="text-white font-medium">Israel</div>
+            <div className="text-white font-medium">Israel, Tel-Aviv</div>
           </motion.div>
 
           <motion.div
@@ -102,11 +102,11 @@ export default function Contact() {
           >
             <div className="flex items-center gap-3 mb-2">
               <div className="p-2 rounded-lg bg-green-500/20 border border-green-400/30">
-                <FaBriefcase className="text-green-400" />
+                <FaPhone className="text-green-400" />
               </div>
-              <div className="text-white/60 text-sm">Availability</div>
+              <div className="text-white/60 text-sm">Phone</div>
             </div>
-            <div className="text-white font-medium">Open to junior roles</div>
+            <div className="text-white font-medium">+972-547683380</div>
           </motion.div>
         </div>
 

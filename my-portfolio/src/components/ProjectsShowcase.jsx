@@ -1,11 +1,30 @@
 import { motion } from "framer-motion";
 import { FaExternalLinkAlt, FaArrowRight } from "react-icons/fa";
+import {
+  SiReact,
+  SiNodedotjs,
+  SiPostgresql,
+  SiJsonwebtokens,
+  SiOpenai,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiExpress,
+} from "react-icons/si";
 
 const projects = [
   {
     title: "Splitify",
     desc: "Scan receipts, extract items with AI, and split costs between friends. Built with React Native for seamless mobile experience.",
-    tags: ["React Native", "Node.js", "PostgreSQL", "JWT", "AI"],
+    tech: [
+      { icon: SiJavascript, color: "text-yellow-500", name: "JavaScript" },
+      { icon: SiReact, color: "text-cyan-400", name: "React Native" },
+      { icon: SiNodedotjs, color: "text-green-500", name: "Node.js" },
+      { icon: SiExpress, color: "text-gray-400", name: "Express" },
+      { icon: SiPostgresql, color: "text-blue-400", name: "PostgreSQL" },
+      { icon: SiJsonwebtokens, color: "text-pink-400", name: "JWT" },
+      { icon: SiOpenai, color: "text-purple-400", name: "AI" },
+    ],
     github: "https://github.com/AllenAvramov/Backend-Splitify",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
     gradient: "from-purple-500/20 to-pink-500/20",
@@ -13,7 +32,14 @@ const projects = [
   {
     title: "JobPilot",
     desc: "Job tracking dashboard with authentication, CRUD operations, and a clean, intuitive UI for managing applications.",
-    tags: ["React", "Express", "SQL", "JWT"],
+    tech: [
+      { icon: SiJavascript, color: "text-yellow-500", name: "JavaScript" },
+      { icon: SiReact, color: "text-cyan-400", name: "React" },
+      { icon: SiNodedotjs, color: "text-green-500", name: "Node.js" },
+      { icon: SiExpress, color: "text-gray-400", name: "Express" },
+      { icon: SiPostgresql, color: "text-blue-400", name: "PostgreSQL" },
+      { icon: SiJsonwebtokens, color: "text-pink-400", name: "JWT" },
+    ],
     github: "#",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
     gradient: "from-cyan-500/20 to-blue-500/20",
@@ -21,7 +47,12 @@ const projects = [
   {
     title: "IMDb Search Platform",
     desc: "Movie search platform with persistence and CRUD features. Integrated with external APIs for comprehensive movie data.",
-    tags: ["JavaScript", "SQL", "REST API", "HTML/CSS"],
+    tech: [
+      { icon: SiHtml5, color: "text-orange-500", name: "HTML" },
+      { icon: SiCss3, color: "text-blue-500", name: "CSS" },
+      { icon: SiJavascript, color: "text-yellow-500", name: "JavaScript" },
+      { icon: SiPostgresql, color: "text-blue-400", name: "PostgreSQL" },
+    ],
     github: "https://github.com/AllenAvramov/API_Example",
     image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&h=500&fit=crop",
     gradient: "from-orange-500/20 to-red-500/20",
@@ -102,16 +133,25 @@ export default function ProjectsShowcase() {
               </motion.a>
             </div>
 
-            {/* Tags */}
-            <div className="flex flex-wrap gap-2">
-              {p.tags.map((t) => (
-                <span
-                  key={t}
-                  className="px-3 py-1 rounded-full text-xs bg-white/5 border border-white/10 text-white/70
-                             group-hover:bg-white/10 group-hover:border-white/20 transition-all"
+            {/* Tech */}
+            <div className="flex items-center gap-4 mt-2">
+              {p.tech.map(({ icon: Icon, color, name }) => (
+                <div
+                  key={name}
+                  className="group/icon relative"
                 >
-                  {t}
-                </span>
+                  <Icon
+                    className={`text-2xl ${color} transition-transform duration-300 group-hover/icon:scale-110`}
+                  />
+
+                  {/* Tooltip */}
+                  <span className="absolute -bottom-7 left-1/2 -translate-x-1/2
+                                  whitespace-nowrap text-[10px] px-2 py-1 rounded-md
+                                  bg-black/80 text-white opacity-0
+                                  group-hover/icon:opacity-100 transition">
+                    {name}
+                  </span>
+                </div>
               ))}
             </div>
           </div>
