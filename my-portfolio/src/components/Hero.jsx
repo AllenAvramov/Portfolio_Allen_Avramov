@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaInstagram, FaExternalLinkAlt, FaEnvelope, FaStar } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import meImage from "../assets/Me.png";
+import { SiNodedotjs, SiReact } from "react-icons/si";
 
 const tech = ["React", "JavaScript", "Node.js", "PostgreSQL"];
 
@@ -220,7 +221,7 @@ export default function Hero() {
               }}
               className="absolute -top-6 -right-6 w-16 h-16 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm flex items-center justify-center"
             >
-              <span className="text-2xl">⚛️</span>
+              <span className="text-2xl"><SiNodedotjs size={40} color="#3C873A" /></span>
             </motion.div>
             
             <motion.div
@@ -235,7 +236,7 @@ export default function Hero() {
               }}
               className="absolute -bottom-6 -left-6 w-16 h-16 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm flex items-center justify-center"
             >
-              <span className="text-2xl">💻</span>
+              <span className="text-2xl"><SiReact size={40} color="#61DAFB" /></span>
             </motion.div>
           </div>
         </motion.div>
