@@ -47,7 +47,7 @@ export default function Contact() {
       >
         <h3 className="text-2xl font-bold mb-2">Send a message</h3>
         <p className="text-white/70 text-sm mb-6">
-          Have a project in mind? Let's collaborate and bring your ideas to life.
+          Have a project in mind? Let's collaborate and bring your ideas to life!
         </p>
 
         <form onSubmit={onSubmit} className="space-y-4">
