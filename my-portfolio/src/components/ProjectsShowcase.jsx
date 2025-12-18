@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaExternalLinkAlt, FaArrowRight } from "react-icons/fa";
+import {  FaArrowRight } from "react-icons/fa";
 import {
   SiReact,
   SiNodedotjs,
