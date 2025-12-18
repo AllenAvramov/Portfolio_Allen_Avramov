@@ -49,8 +49,8 @@ export default function About() {
 
                 <div className="flex flex-wrap justify-center gap-4 mb-16">
                     <motion.a
-                        href="/Allen.pdf"
-                        download="Allen_Avramov_CV.pdf"
+                        href="/certificates/Allen.pdf"
+                        download="/certificates/Allen.pdf"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="inline-flex items-center gap-2 px-6 py-3 rounded-xl

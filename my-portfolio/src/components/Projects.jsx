@@ -1,32 +1,7 @@
 import { motion } from "framer-motion";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
-const projects = [
-  {
-    title: "Splitify",
-    desc: "Scan receipts, extract items with AI, and split costs between friends. Built with React Native for seamless mobile experience.",
-    tags: ["React Native", "Node.js", "PostgreSQL", "JWT", "AI"],
-    link: "#",
-    github: "#",
-    gradient: "from-purple-500/20 to-pink-500/20",
-  },
-  {
-    title: "JobPilot",
-    desc: "Job tracking dashboard with authentication, CRUD operations, and a clean, intuitive UI for managing applications.",
-    tags: ["React", "Express", "SQL", "JWT"],
-    link: "#",
-    github: "#",
-    gradient: "from-cyan-500/20 to-blue-500/20",
-  },
-  {
-    title: "IMDb Search Platform",
-    desc: "Movie search platform with persistence and CRUD features. Integrated with external APIs for comprehensive movie data.",
-    tags: ["JavaScript", "SQL", "REST API", "HTML/CSS"],
-    link: "#",
-    github: "#",
-    gradient: "from-orange-500/20 to-red-500/20",
-  },
-];
+
 
 const container = {
   hidden: {},

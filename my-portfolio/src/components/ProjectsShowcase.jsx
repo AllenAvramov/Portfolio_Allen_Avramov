@@ -6,8 +6,7 @@ const projects = [
     title: "Splitify",
     desc: "Scan receipts, extract items with AI, and split costs between friends. Built with React Native for seamless mobile experience.",
     tags: ["React Native", "Node.js", "PostgreSQL", "JWT", "AI"],
-    link: "#",
-    github: "#",
+    github: "https://github.com/AllenAvramov/Backend-Splitify",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
     gradient: "from-purple-500/20 to-pink-500/20",
   },
@@ -15,7 +14,6 @@ const projects = [
     title: "JobPilot",
     desc: "Job tracking dashboard with authentication, CRUD operations, and a clean, intuitive UI for managing applications.",
     tags: ["React", "Express", "SQL", "JWT"],
-    link: "#",
     github: "#",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
     gradient: "from-cyan-500/20 to-blue-500/20",
@@ -24,11 +22,11 @@ const projects = [
     title: "IMDb Search Platform",
     desc: "Movie search platform with persistence and CRUD features. Integrated with external APIs for comprehensive movie data.",
     tags: ["JavaScript", "SQL", "REST API", "HTML/CSS"],
-    link: "#",
-    github: "#",
+    github: "https://github.com/AllenAvramov/API_Example",
     image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&h=500&fit=crop",
     gradient: "from-orange-500/20 to-red-500/20",
   },
+  
 ];
 
 const container = {
@@ -88,19 +86,7 @@ export default function ProjectsShowcase() {
 
             {/* Action Buttons */}
             <div className="flex gap-3 mb-4">
-              <motion.a
-                href={p.link}
-                target="_blank"
-                rel="noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg
-                           bg-white/5 border border-white/10 hover:bg-white/10 text-white/80 hover:text-white
-                           transition-all text-sm font-medium"
-              >
-                <FaExternalLinkAlt className="text-xs" />
-                Live Demo
-              </motion.a>
+              
               <motion.a
                 href={p.github}
                 target="_blank"
@@ -111,7 +97,7 @@ export default function ProjectsShowcase() {
                            bg-white/5 border border-white/10 hover:bg-white/10 text-white/80 hover:text-white
                            transition-all text-sm font-medium"
               >
-                Details
+                Code
                 <FaArrowRight className="text-xs" />
               </motion.a>
             </div>
