@@ -80,26 +80,7 @@ export default function Showcase() {
         </motion.div>
       </AnimatePresence>
 
-      {/* See More Button */}
-      {activeTab === "projects" && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
-          className="flex justify-center mt-12"
-        >
-          <motion.button
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/10
-                       text-white/80 hover:bg-white/10 hover:text-white transition-all"
-          >
-            See More
-            <FaChevronDown />
-          </motion.button>
-        </motion.div>
-      )}
+      
     </section>
   );
 }
