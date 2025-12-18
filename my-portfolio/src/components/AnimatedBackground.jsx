@@ -5,67 +5,67 @@ export default function AnimatedBackground() {
     const orbs = [
         {
             color: "purple",
-            size: 600,
-            blur: 100,
+            size: 650,
+            blur: 85,
             left: "10%",
             top: "10%",
-            animateX: [0, 300, -200, 0],
-            animateY: [0, 200, -300, 0],
+            animateX: [0, 400, -300, 0],
+            animateY: [0, 300, -400, 0],
             duration: 20,
             delay: 0,
         },
         {
             color: "cyan",
-            size: 640,
-            blur: 120,
+            size: 680,
+            blur: 90,
             left: "80%",
             top: "20%",
-            animateX: [0, -400, 300, 0],
-            animateY: [0, -200, 150, 0],
+            animateX: [0, -500, 400, 0],
+            animateY: [0, -300, 200, 0],
             duration: 25,
             delay: 2,
         },
         {
             color: "fuchsia",
-            size: 680,
-            blur: 130,
+            size: 720,
+            blur: 95,
             left: "50%",
             top: "70%",
-            animateX: [0, 200, -300, 0],
-            animateY: [0, -300, 200, 0],
+            animateX: [0, 300, -400, 0],
+            animateY: [0, -400, 300, 0],
             duration: 30,
             delay: 4,
         },
         {
             color: "blue",
-            size: 500,
-            blur: 100,
+            size: 600,
+            blur: 85,
             left: "20%",
             top: "60%",
-            animateX: [0, 350, -250, 0],
-            animateY: [0, -250, 300, 0],
+            animateX: [0, 450, -350, 0],
+            animateY: [0, -350, 400, 0],
             duration: 22,
             delay: 1,
         },
         {
             color: "pink",
-            size: 550,
-            blur: 110,
+            size: 630,
+            blur: 88,
             left: "70%",
             top: "80%",
-            animateX: [0, -300, 400, 0],
-            animateY: [0, 250, -200, 0],
+            animateX: [0, -400, 500, 0],
+            animateY: [0, 350, -300, 0],
             duration: 28,
             delay: 3,
         },
         {
             color: "indigo",
-            size: 520,
-            blur: 105,
+            size: 660,
+            blur: 90,
             left: "30%",
             top: "30%",
-            animateX: [0, 250, -350, 0],
-            animateY: [0, 350, -250, 0],
+            animateX: [0, 350, -450, 0],
+            animateY: [0, 450, -350, 0],
             duration: 24,
             delay: 5,
         },
@@ -73,12 +73,12 @@ export default function AnimatedBackground() {
 
     const getColorClass = (color) => {
         const colors = {
-            purple: "bg-purple-600/30",
-            cyan: "bg-cyan-500/25",
-            fuchsia: "bg-fuchsia-500/20",
-            blue: "bg-blue-500/20",
-            pink: "bg-pink-500/25",
-            indigo: "bg-indigo-500/20",
+            purple: "bg-purple-500/35",
+            cyan: "bg-cyan-400/30",
+            fuchsia: "bg-fuchsia-500/28",
+            blue: "bg-blue-400/30",
+            pink: "bg-pink-500/32",
+            indigo: "bg-indigo-400/28",
         };
         return colors[color] || colors.purple;
     };
@@ -104,8 +104,8 @@ export default function AnimatedBackground() {
                     animate={{
                         x: orb.animateX,
                         y: orb.animateY,
-                        scale: [1, 1.2, 0.8, 1],
-                        opacity: [0.3, 0.5, 0.4, 0.3],
+                        scale: [1, 1.2, 0.9, 1],
+                        opacity: [0.4, 0.55, 0.45, 0.4],
                     }}
                     transition={{
                         x: {
@@ -140,20 +140,20 @@ export default function AnimatedBackground() {
             {[...Array(4)].map((_, i) => (
                 <motion.div
                     key={`small-${i}`}
-                    className="absolute rounded-full bg-gradient-to-r from-purple-400/20 to-cyan-400/20"
+                    className="absolute rounded-full bg-gradient-to-r from-purple-400/25 to-cyan-400/25"
                     style={{
-                        width: `${200 + i * 50}px`,
-                        height: `${200 + i * 50}px`,
-                        filter: `blur(${60 + i * 10}px)`,
+                        width: `${250 + i * 60}px`,
+                        height: `${250 + i * 60}px`,
+                        filter: `blur(${65 + i * 10}px)`,
                         left: `${20 + i * 25}%`,
                         top: `${30 + i * 15}%`,
                         transform: "translate(-50%, -50%)",
                     }}
                     animate={{
-                        x: [0, 100, -100, 0],
-                        y: [0, -80, 120, 0],
-                        scale: [1, 1.3, 0.7, 1],
-                        opacity: [0.2, 0.4, 0.3, 0.2],
+                        x: [0, 120, -120, 0],
+                        y: [0, -100, 150, 0],
+                        scale: [1, 1.25, 0.85, 1],
+                        opacity: [0.3, 0.45, 0.35, 0.3],
                     }}
                     transition={{
                         duration: 15 + i * 3,

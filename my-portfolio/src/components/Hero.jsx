@@ -1,15 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaInstagram, FaExternalLinkAlt, FaEnvelope, FaStar } from "react-icons/fa";
+import { useState, useEffect } from "react";
 
 const tech = ["React", "JavaScript", "Node.js", "PostgreSQL"];
 
 function useTypewriter(words, speed = 100, pause = 2000) {
-  const [text, setText] = React.useState("");
-  const [wi, setWi] = React.useState(0);
-  const [dir, setDir] = React.useState("forward");
+  const [text, setText] = useState("");
+  const [wi, setWi] = useState(0);
+  const [dir, setDir] = useState("forward");
 
-  React.useEffect(() => {
+  useEffect(() => {
     const word = words[wi % words.length];
 
     const tick = () => {
