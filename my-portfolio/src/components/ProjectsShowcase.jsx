@@ -15,7 +15,7 @@ import {
 const projects = [
   {
     title: "Splitify",
-    desc: "Scan receipts, extract items with AI, and split costs between friends. Built with React Native for seamless mobile experience.",
+    desc: "React Native app for splitting restaurant bills. Users scan receipts with the camera - OpenAI Vision extracts items and prices. The app creates shareable rooms where multiple users select items and automatically calculates each person’s share.",
     tech: [
       { icon: SiJavascript, color: "text-yellow-500", name: "JavaScript" },
       { icon: SiReact, color: "text-cyan-400", name: "React Native" },
@@ -46,7 +46,7 @@ const projects = [
   },
   {
     title: "IMDb Search Platform",
-    desc: "Movie search platform with persistence and CRUD features. Integrated with external APIs for comprehensive movie data.",
+    desc: "Developed a full-stack movie exploration platform. The application enables users to search and discover movies, manage personalized collections, and add custom streaming links. Designed an optimized relational database schema and implemented full CRUD functionality with persistent storage, ensuring efficient data retrieval and a smooth, scalable user experience.",
     tech: [
       { icon: SiHtml5, color: "text-orange-500", name: "HTML" },
       { icon: SiCss3, color: "text-blue-500", name: "CSS" },
