@@ -40,7 +40,7 @@ function useTypewriter(words, speed = 100, pause = 2000) {
 }
 
 export default function Hero() {
-  const typed = useTypewriter(["Tech Enthusiast", "Computer Science Graduate","Secure Systems Enthusiast", "API & Database Developer", "Problem Solver" ], 100, 2000);
+  const typed = useTypewriter(["Tech Enthusiast", "Computer Science Graduate","Secure Systems Enthusiast", "API & Database Developer", "Problem Solver", "QA engineer" ], 100, 2000);
 
   return (
     <section id="home" className="mx-auto max-w-7xl px-4 pt-40 md:pt-48 pb-20 md:pb-28">
